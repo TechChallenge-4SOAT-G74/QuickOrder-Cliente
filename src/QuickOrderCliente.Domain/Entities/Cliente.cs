@@ -7,7 +7,7 @@ namespace QuickOrderCliente.Domain.Entities
     {
         protected Cliente() { }
 
-        protected Cliente(string nome, DateTime dataNascimento, ESexo sexo, EnderecoVo endereco) 
+        public Cliente(string nome, DateTime dataNascimento, int sexo, EnderecoVo endereco) 
         { 
             Nome = nome;
             DataNascimento = DataNascimento;
@@ -20,7 +20,7 @@ namespace QuickOrderCliente.Domain.Entities
         public string Nome { get; set; }
         public DateTime DataNascimento{ get; set; }
         public virtual EnderecoVo Endereco { get; set; }
-        public ESexo Sexo { get; set; }
+        public int Sexo { get; set; }
 
         private void Validar()
         {

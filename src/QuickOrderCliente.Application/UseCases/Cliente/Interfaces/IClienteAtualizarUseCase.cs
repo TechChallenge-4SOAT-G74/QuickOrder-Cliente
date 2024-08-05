@@ -4,6 +4,6 @@ namespace QuickOrderCliente.Application.UseCases.Cliente.Interfaces
 {
     public interface IClienteAtualizarUseCase
     {
-        Task<ServiceResult> Execute(ClienteDto produto, int id);
+        Task<ServiceResult> Execute(ClienteDto clienteViewModel, int id);
     }
 }

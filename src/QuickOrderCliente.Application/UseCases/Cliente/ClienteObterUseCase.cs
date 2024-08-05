@@ -28,7 +28,7 @@ namespace QuickOrderCliente.Application.UseCases.Cliente
                 {
                     list.Add(new ClienteDto
                     {
-                        Sexo = cliente.Sexo.ToDescriptionString(),
+                        Sexo = ESexoExtensions.ToDescriptionString((ESexo)cliente.Sexo),
                         Nome = cliente.Nome,
                         DataNascimento = cliente.DataNascimento,
                         Rua = cliente.Endereco.Rua,
@@ -53,7 +53,7 @@ namespace QuickOrderCliente.Application.UseCases.Cliente
 
                 result.Data = new ClienteDto
                 {
-                    Sexo = cliente.Sexo.ToDescriptionString(),
+                    Sexo = ESexoExtensions.ToDescriptionString((ESexo)cliente.Sexo),
                     Nome = cliente.Nome,
                     DataNascimento = cliente.DataNascimento,
                     Rua = cliente.Endereco.Rua,
