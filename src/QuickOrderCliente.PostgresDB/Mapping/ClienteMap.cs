@@ -9,37 +9,29 @@ namespace QuickOrderCliente.PostgresDB.Mapping
     {
         public void Configure(EntityTypeBuilder<Cliente> builder)
         {
-            builder.OwnsOne(x => x.Endereco, rua =>
+            builder.OwnsOne(x => x.Endereco, e =>
             {
-                rua.Property(x => x.Rua)
+                e.Property(x => x.Rua)
                 .HasColumnName("Rua")
                 .HasColumnType("varchar(150)")
                 .IsRequired(true);
+
+                e.Property(x => x.Numero)
+               .HasColumnName("Numero")
+               .HasColumnType("varchar(10)")
+               .IsRequired(true);
+
+                e.Property(x => x.Cidade)
+               .HasColumnName("Cidade")
+               .HasColumnType("varchar(20)")
+               .IsRequired(true);
+
+                e.Property(x => x.Cep)
+               .HasColumnName("Cep")
+               .HasColumnType("varchar(10)")
+               .IsRequired(true);
             });
 
-            builder.OwnsOne(x => x.Endereco, numero =>
-            {
-                numero.Property(x => x.Numero)
-                .HasColumnName("Numero")
-                .HasColumnType("varchar(10)")
-                .IsRequired(true);
-            });
-
-            builder.OwnsOne(x => x.Endereco, cidade =>
-            {
-                cidade.Property(x => x.Cidade)
-                .HasColumnName("Cidade")
-                .HasColumnType("varchar(20)")
-                .IsRequired(true);
-            });
-
-            builder.OwnsOne(x => x.Endereco, cep =>
-            {
-                cep.Property(x => x.Cep)
-                .HasColumnName("Cep")
-                .HasColumnType("varchar(10)")
-                .IsRequired(true);
-            });
 
             builder.Property(x => x.Nome)
                .IsRequired();
