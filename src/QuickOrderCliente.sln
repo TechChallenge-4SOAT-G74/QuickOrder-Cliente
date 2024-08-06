@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35122.118
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickOrderCliente.Application", "QuickOrderCliente.Application\QuickOrderCliente.Application.csproj", "{4E3ABA28-8CC9-4A30-A9D1-28BBA7F42A80}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuickOrderCliente.Application", "QuickOrderCliente.Application\QuickOrderCliente.Application.csproj", "{4E3ABA28-8CC9-4A30-A9D1-28BBA7F42A80}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickOrderCliente.Domain", "QuickOrderCliente.Domain\QuickOrderCliente.Domain.csproj", "{0B2659E4-13E4-484D-9147-9679D11A902B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuickOrderCliente.Domain", "QuickOrderCliente.Domain\QuickOrderCliente.Domain.csproj", "{0B2659E4-13E4-484D-9147-9679D11A902B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickOrderCliente.PostgresDB", "QuickOrderCliente.PostgresDB\QuickOrderCliente.PostgresDB.csproj", "{C69DDAAA-BCE5-4F5E-ACE9-02BCF6236263}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuickOrderCliente.PostgresDB", "QuickOrderCliente.PostgresDB\QuickOrderCliente.PostgresDB.csproj", "{C69DDAAA-BCE5-4F5E-ACE9-02BCF6236263}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickOrderCliente.Tests", "QuickOrderCliente.Tests\QuickOrderCliente.Tests.csproj", "{9DF0D5D9-42FD-4707-A39A-8E96B2D1EC4E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuickOrderCliente.Tests", "QuickOrderCliente.Tests\QuickOrderCliente.Tests.csproj", "{9DF0D5D9-42FD-4707-A39A-8E96B2D1EC4E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickOrderCliente.IoC", "QuickOrderCliente.IoC\QuickOrderCliente.IoC.csproj", "{36D897BD-770B-4A4A-8881-27C54D96B752}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuickOrderCliente.IoC", "QuickOrderCliente.IoC\QuickOrderCliente.IoC.csproj", "{36D897BD-770B-4A4A-8881-27C54D96B752}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickOrderCliente.Api", "QuickOrderCliente.Api\QuickOrderCliente.Api.csproj", "{01627857-E4A9-4590-B85A-FBD5D93797AA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{36D897BD-770B-4A4A-8881-27C54D96B752}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{36D897BD-770B-4A4A-8881-27C54D96B752}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{36D897BD-770B-4A4A-8881-27C54D96B752}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01627857-E4A9-4590-B85A-FBD5D93797AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01627857-E4A9-4590-B85A-FBD5D93797AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01627857-E4A9-4590-B85A-FBD5D93797AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01627857-E4A9-4590-B85A-FBD5D93797AA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
