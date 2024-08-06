@@ -49,6 +49,8 @@ namespace QuickOrderCliente.PostgresDB.Mapping
 
             builder.Property(x => x.Sexo)
                .IsRequired();
+
+            builder.Property(x => x.Ativo);
         }
     }
 }

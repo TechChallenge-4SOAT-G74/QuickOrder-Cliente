@@ -20,7 +20,7 @@ namespace QuickOrderCliente.Application.UseCases.Cliente
 
             try
             {
-                var clientes = await _clienteRepository.GetAll();
+                var clientes = await _clienteRepository.GetAll(c => c.Ativo);
 
                 var list = new List<ClienteDto>();
 
@@ -50,7 +50,7 @@ namespace QuickOrderCliente.Application.UseCases.Cliente
 
             try
             {
-                var cliente = await _clienteRepository.GetFirst(id);
+                var cliente = await _clienteRepository.GetFirst(c => c.Id == id && c.Ativo);
 
                 if (cliente != null)
                 {

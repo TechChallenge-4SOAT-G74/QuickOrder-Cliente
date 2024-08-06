@@ -21,6 +21,7 @@ namespace QuickOrderCliente.Domain.Entities
         public DateTime DataNascimento{ get; set; }
         public virtual EnderecoVo Endereco { get; set; }
         public int Sexo { get; set; }
+        public bool Ativo { get; set; } = true;
 
         private void Validar()
         {

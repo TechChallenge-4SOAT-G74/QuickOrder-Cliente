@@ -44,5 +44,27 @@ namespace QuickOrderCliente.Application.UseCases.Cliente
             catch (Exception ex) { result.AddError(ex.Message); }
             return result;
         }
+
+        public async Task<ServiceResult> Execute(int id)
+        {
+            ServiceResult result = new();
+
+            try
+            {
+                var clienteExiste = await _clienteRepository.GetFirst(id);
+
+                if (clienteExiste == null)
+                {
+                    result.AddError("Cliente não encontrado.");
+                    return result;
+                }
+
+                clienteExiste.Ativo = false;
+
+                await _clienteRepository.Update(clienteExiste);
+            }
+            catch (Exception ex) { result.AddError(ex.Message); }
+            return result;
+        }
     }
 }
