@@ -1,0 +1,39 @@
+version: '3.4'
+
+services:
+  postgres:
+    ports:
+      - '5432:5432'
+    restart: always
+    container_name: quickorder-cliente-db-postgresql
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=quickorder-cliente-db
+    volumes:
+      - 'quickorder-cliente-db-postgresql-volume:/var/lib/postgresql/data'
+    image: 'postgres:latest'
+    networks:
+      - quickorder-cliente-db-network
+  quickordercliente.api:
+    image: ${DOCKER_REGISTRY-}quickorderclienteapi
+    volumes:
+      - 'api-volume:/var/www/html'
+    build:
+      context: .
+      dockerfile: QuickOrderCliente.Api/Dockerfile
+    ports:
+      - '8090:80'
+      - '5046:443'
+    restart: always 
+    depends_on:
+      - 'postgres'
+    networks:
+      - quickorder-cliente-db-network  
+volumes:
+  quickorder-cliente-db-postgresql-volume:
+  api-volume:
+
+networks:
+  quickorder-cliente-db-network:
+    driver: bridge
