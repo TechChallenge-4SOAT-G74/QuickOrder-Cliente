@@ -10,7 +10,7 @@ namespace QuickOrderCliente.Domain.Entities
         public Cliente(string nome, DateTime dataNascimento, int sexo, EnderecoVo endereco) 
         { 
             Nome = nome;
-            DataNascimento = DataNascimento;
+            DataNascimento = dataNascimento;
             Endereco = endereco;
             Sexo = sexo;
 

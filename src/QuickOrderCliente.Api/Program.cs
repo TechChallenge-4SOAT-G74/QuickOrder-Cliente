@@ -68,8 +68,8 @@ app.UseReDoc(c =>
     c.SpecUrl = "/swagger/v1/swagger.json";
 });
 
-//Register Produtos Endpoints
-//app.RegisterClienteEndpoints();
+//Register Clientes Endpoints
+app.RegisterProdutoEndpoints();
 
 app.UseCors(myAllowSpecificOrigins);
 

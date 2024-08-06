@@ -47,20 +47,24 @@ namespace QuickOrderCliente.Application.UseCases.Cliente
         public async Task<ServiceResult<ClienteDto>> Execute(int id)
         {
             ServiceResult<ClienteDto> result = new();
+
             try
             {
                 var cliente = await _clienteRepository.GetFirst(id);
 
-                result.Data = new ClienteDto
+                if (cliente != null)
                 {
-                    Sexo = ESexoExtensions.ToDescriptionString((ESexo)cliente.Sexo),
-                    Nome = cliente.Nome,
-                    DataNascimento = cliente.DataNascimento,
-                    Rua = cliente.Endereco.Rua,
-                    Cidade = cliente.Endereco.Cidade,
-                    Cep = cliente.Endereco.Cep,
-                    Numero = cliente.Endereco.Numero
-                };
+                    result.Data = new ClienteDto
+                    {
+                        Sexo = ESexoExtensions.ToDescriptionString((ESexo)cliente.Sexo),
+                        Nome = cliente.Nome,
+                        DataNascimento = cliente.DataNascimento,
+                        Rua = cliente.Endereco.Rua,
+                        Cidade = cliente.Endereco.Cidade,
+                        Cep = cliente.Endereco.Cep,
+                        Numero = cliente.Endereco.Numero
+                    };
+                }
             }
             catch (Exception ex) { result.AddError(ex.Message); }
             return result;

@@ -20,7 +20,7 @@ namespace QuickOrderCliente.PostgresDB.Core
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             MapEntities(modelBuilder);
-            DisableDeleteCascade(modelBuilder);
+            //DisableDeleteCascade(modelBuilder);
 
             SetDefaultDatabaseTypes(modelBuilder);
 
