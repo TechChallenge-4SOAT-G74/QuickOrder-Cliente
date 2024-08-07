@@ -1,10 +1,7 @@
 ﻿using QuickOrderCliente.Application.Dtos;
 using QuickOrderCliente.Application.UseCases.Cliente.Interfaces;
 using QuickOrderCliente.Domain.Adapters;
-using QuickOrderCliente.Domain.Entities;
 using QuickOrderCliente.Domain.Enums;
-using System.Runtime.ConstrainedExecution;
-using System.Security.Cryptography;
 
 namespace QuickOrderCliente.Application.UseCases.Cliente
 {

@@ -1,5 +1,4 @@
-﻿using QuickOrderCliente.Domain.Enums;
-using QuickOrderCliente.Domain.ValueObjects;
+﻿using QuickOrderCliente.Domain.ValueObjects;
 
 namespace QuickOrderCliente.Domain.Entities
 {

@@ -1,6 +1,4 @@
-﻿using QuickOrderCliente.Domain.ValueObjects;
-
-namespace QuickOrderCliente.Application.Dtos
+﻿namespace QuickOrderCliente.Application.Dtos
 {
     public class ClienteDto
     {
