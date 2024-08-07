@@ -52,10 +52,10 @@ namespace QuickOrderCliente.Tests.UseCase
             // Arrange
             var clienteRepositoryMock = new Mock<IClienteRepository>();
 
-            var enderecoVo1 = new EnderecoVo("Rua Teste", "1", "Rio de Janeiro", "11111111");
+            var enderecoVo = new EnderecoVo("Rua Teste", "1", "Rio de Janeiro", "11111111");
 
             clienteRepositoryMock.Setup(x => x.GetFirst(It.IsAny<Expression<Func<Cliente, bool>>>()))
-                .ReturnsAsync(new Cliente("José Calos", new DateTime(2000, 05, 12), "30346888069", 1, enderecoVo1));
+                .ReturnsAsync(new Cliente("José Calos", new DateTime(2000, 05, 12), "30346888069", 1, enderecoVo));
 
             var useCase = new ClienteCriarUseCase(clienteRepositoryMock.Object);
 

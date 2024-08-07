@@ -8,7 +8,7 @@ namespace QuickOrderCliente.Api.Configuration
     [ExcludeFromCodeCoverage]
     public static class EndpointsControleConfig
     {
-        public static void RegisterProdutoEndpoints(this WebApplication app)
+        public static void RegisterClienteEndpoints(this WebApplication app)
         {
             app.MapGet("/GetAll", async ([FromServices] IClienteObterUseCase clienteObterUseCase) =>
             {

@@ -11,7 +11,7 @@ builder.Services.Configure<DatabaseSettings>(
 );
 
 var migrationsAssembly = typeof(ApplicationContext).Assembly.GetName().Name;
-var migrationTable = "__ProdutoMigrationsHistory";
+var migrationTable = "__ClienteMigrationsHistory";
 var databaseSettings = builder.Configuration.GetSection("DatabaseSettings").Get<DatabaseSettings>();
 
 builder.Services.AddDbContext<ApplicationContext>(options =>
@@ -69,7 +69,7 @@ app.UseReDoc(c =>
 });
 
 //Register Clientes Endpoints
-app.RegisterProdutoEndpoints();
+app.RegisterClienteEndpoints();
 
 app.UseCors(myAllowSpecificOrigins);
 

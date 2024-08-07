@@ -43,7 +43,7 @@ namespace QuickOrderCliente.Tests.UseCase
         }
 
         [Fact]
-        public async Task Execute_ShouldReturnCliente_WhenProdutoExists()
+        public async Task Execute_ShouldReturnCliente_WhenClienteExists()
         {
             // Arrange
             var enderecoVo1 = new EnderecoVo("Rua Teste", "1", "Rio de Janeiro", "11111111");
