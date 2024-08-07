@@ -30,7 +30,6 @@ namespace QuickOrderCliente.Domain.Entities
             if (string.IsNullOrWhiteSpace(Cpf)) { throw new Exception("CPF não informado!"); }
             if (Nome.Length < 8) { throw new Exception("Nome deve ter pelo menos 3 caracteres!"); }
             if (!ValidaCpf(Cpf)) { throw new Exception("CPF inválido!"); }
-            //if (Cpf.Length < 11) { throw new Exception("CPF deve ter 11 caracteres!"); }
             if (Endereco == null ) { throw new Exception("Endereço não informado!"); }
         }
 
