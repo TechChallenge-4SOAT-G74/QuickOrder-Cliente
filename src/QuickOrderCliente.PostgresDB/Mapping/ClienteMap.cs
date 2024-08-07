@@ -39,6 +39,9 @@ namespace QuickOrderCliente.PostgresDB.Mapping
             builder.Property(x => x.DataNascimento)
                .IsRequired();
 
+            builder.Property(x => x.Cpf)
+               .IsRequired();
+
             builder.Property(x => x.Sexo)
                .IsRequired();
 

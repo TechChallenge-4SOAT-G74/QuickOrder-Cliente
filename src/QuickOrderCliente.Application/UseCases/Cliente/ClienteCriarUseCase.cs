@@ -35,6 +35,7 @@ namespace QuickOrderCliente.Application.UseCases.Cliente
                 var cliente = new ClienteEntity(
                     clienteViewModel.Nome,
                     clienteViewModel.DataNascimento,
+                    clienteViewModel.Cpf,
                     (int)(ESexo)Enum.Parse(typeof(ESexo), clienteViewModel.Sexo),
                     enderecoVo
                     );
