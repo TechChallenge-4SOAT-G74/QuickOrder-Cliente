@@ -34,7 +34,8 @@ namespace QuickOrderCliente.Application.UseCases.Cliente
                         Rua = cliente.Endereco.Rua,
                         Cidade = cliente.Endereco.Cidade,
                         Cep = cliente.Endereco.Cep,
-                        Numero = cliente.Endereco.Numero
+                        Numero = cliente.Endereco.Numero,
+                        Cpf = cliente.Cpf
                     });
                 }
 
@@ -62,7 +63,8 @@ namespace QuickOrderCliente.Application.UseCases.Cliente
                         Rua = cliente.Endereco.Rua,
                         Cidade = cliente.Endereco.Cidade,
                         Cep = cliente.Endereco.Cep,
-                        Numero = cliente.Endereco.Numero
+                        Numero = cliente.Endereco.Numero,
+                        Cpf = cliente.Cpf
                     };
                 }
             }
