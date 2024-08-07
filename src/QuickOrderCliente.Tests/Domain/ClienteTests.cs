@@ -26,7 +26,7 @@ namespace QuickOrderCliente.Tests.Domain
             var enderecoVo = new EnderecoVo("Rua Teste", "1", "Rio de Janeiro", "22222222");
 
             //Act 
-            var action = () => new Cliente("", new DateTime(2000, 05, 12), "11111111111", 1, enderecoVo);
+            var action = () => new Cliente("", new DateTime(2000, 05, 12), "30346888069", 1, enderecoVo);
             var exception = Assert.Throws<Exception>(action);
 
             //Assert
@@ -40,7 +40,7 @@ namespace QuickOrderCliente.Tests.Domain
             var enderecoVo = new EnderecoVo("Rua Teste", "1", "Rio de Janeiro", "22222222");
 
             //Act 
-            var action = () => new Cliente("Jos", new DateTime(2000, 05, 12), "11111111111", 1, enderecoVo);
+            var action = () => new Cliente("Jos", new DateTime(2000, 05, 12), "30346888069", 1, enderecoVo);
             var exception = Assert.Throws<Exception>(action);
 
             //Assert
@@ -48,24 +48,24 @@ namespace QuickOrderCliente.Tests.Domain
         }
 
         [Fact]
-        public void Construtor_Deve_Criticar_Cpf_Com_Menos_Caracteres_Que_Permitido()
+        public void Construtor_Deve_Criticar_Cpf_Inválido()
         {
             //Arrange
             var enderecoVo = new EnderecoVo("Rua Teste", "1", "Rio de Janeiro", "22222222");
 
             //Act 
-            var action = () => new Cliente("José Carlos", new DateTime(2000, 05, 12), "111", 1, enderecoVo);
+            var action = () => new Cliente("José Carlos", new DateTime(2000, 05, 12), "12345678900", 1, enderecoVo);
             var exception = Assert.Throws<Exception>(action);
 
             //Assert
-            Assert.Equal("CPF deve ter 11 caracteres!", exception.Message);
+            Assert.Equal("CPF inválido!", exception.Message);
         }
 
         [Fact]
         public void Construtor_Deve_Criticar_Endereco_Nao_Informado()
         {
             //Arrange, Act 
-            var action = () => new Cliente("José Carlos", new DateTime(2000, 05, 12), "11111111111", 1, null);
+            var action = () => new Cliente("José Carlos", new DateTime(2000, 05, 12), "30346888069", 1, null);
             var exception = Assert.Throws<Exception>(action);
 
             //Assert
