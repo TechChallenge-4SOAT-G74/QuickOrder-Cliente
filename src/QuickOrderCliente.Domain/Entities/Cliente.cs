@@ -24,7 +24,7 @@ namespace QuickOrderCliente.Domain.Entities
         public int Sexo { get; set; }
         public bool Ativo { get; set; } = true;
 
-        private void Validar()
+        public void Validar()
         {
             if (string.IsNullOrWhiteSpace(Nome)) { throw new Exception("Nome não informado!"); }
             if (string.IsNullOrWhiteSpace(Cpf)) { throw new Exception("CPF não informado!"); }
