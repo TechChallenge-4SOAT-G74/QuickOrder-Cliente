@@ -35,7 +35,7 @@ namespace QuickOrderCliente.Api.Configuration
                 return Results.Ok(await clienteExcluirUseCase.Execute(id));
             });
 
-            app.MapPost("/Inativar", async ([FromServices] IClienteAtualizarUseCase clienteAtualizarUseCase, int id) =>
+            app.MapPost("/Inactivate", async ([FromServices] IClienteAtualizarUseCase clienteAtualizarUseCase, int id) =>
             {
                 return Results.Ok(await clienteAtualizarUseCase.Execute(id));
             });
