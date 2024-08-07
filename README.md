@@ -59,3 +59,9 @@ Passo a passo - Instalação:
 * Verifique os sprits do repositório digitando `ls` 
 
 <br />
+
+![image](https://github.com/TechChallenge-4SOAT-G74/QuickOrder-Produto/assets/19378661/83153e7a-811c-4eb0-9f7b-da3590a2e99a)
+
+
+
+<br />
