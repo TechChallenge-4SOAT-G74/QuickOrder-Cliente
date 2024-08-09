@@ -99,14 +99,16 @@ Passo a passo - Instalação:
 
 <br />
 
-![image](https://github.com/TechChallenge-4SOAT-G74/QuickOrder-Produto/assets/19378661/5c9c3b53-6a22-4996-a433-34e20cbd9376)
+![image](https://github.com/user-attachments/assets/ba23f973-3fcb-4dcd-b746-8e1a38b30d78)
 
 
-<br />
-
-* Abrir o browser e digitar o seguinte endereço **http://localhost:30000/swagger/**. O swagger da Api deverá ser exibido, indicando que a subida da aplicação ocorreu com sucesso:
 
 <br />
 
-![image](https://github.com/user-attachments/assets/00e57bd8-a768-48b3-b68c-fc590029f319)
+* Abrir o browser e digitar o seguinte endereço **http://localhost:30400/swagger/**. O swagger da Api deverá ser exibido, indicando que a subida da aplicação ocorreu com sucesso:
+
+<br />
+
+![image](https://github.com/user-attachments/assets/524013b5-ebc4-48bb-bc89-e587b0ca2b22)
+
 
