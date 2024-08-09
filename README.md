@@ -65,3 +65,47 @@ Passo a passo - Instalação:
 
 
 <br />
+
+* Aplicar os **scripts yml** dos **PersistentVolumeClaim** através do comando `kubect apply -f .\01-pvc\`:
+
+<br />
+
+![image](https://github.com/TechChallenge-4SOAT-G74/QuickOrder-Produto/assets/19378661/3f417c40-7978-4801-8910-20d3ce8b3f44)
+
+
+
+<br />
+
+* Aplicar os **scripts yml** dos **Deployments** através do comando `kubectl apply -f .\02-deployments\`:
+
+<br />
+
+![image](https://github.com/TechChallenge-4SOAT-G74/QuickOrder-Produto/assets/19378661/ed24558f-fdf2-43ff-812f-17f0c0efea6e)
+
+
+<br />
+
+* Aplicar os **scripts yml** dos **Services** através do comando `kubectl apply -f .\03-services\`:
+
+<br />
+
+![image](https://github.com/TechChallenge-4SOAT-G74/QuickOrder-Produto/assets/19378661/9966598c-45a5-45a7-8c4e-2c576c8a327e)
+
+
+
+<br />
+
+* Executar comando `kubectl get all` para verificar a criação dos itens dos passos anteriores. O resultado deverá ser similar ao listado abaixo:
+
+<br />
+
+![image](https://github.com/TechChallenge-4SOAT-G74/QuickOrder-Produto/assets/19378661/5c9c3b53-6a22-4996-a433-34e20cbd9376)
+
+
+<br />
+
+* Abrir o browser e digitar o seguinte endereço **http://localhost:30000/swagger/**. O swagger da Api deverá ser exibido, indicando que a subida da aplicação ocorreu com sucesso:
+
+<br />
+
+![image](https://github.com/TechChallenge-4SOAT-G74/QuickOrder-Produto/assets/19378661/d3616035-b416-49ea-92ae-3360795ae189)
